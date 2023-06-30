@@ -20,7 +20,9 @@ const NavBar = () => {
       <div className="max-w-7xl mx-auto sm:px-4 lg:px-8">
         <div className="flex justify-between h-8">
           <div className="flex-shrink-0 flex items-center">
+            <Link to='/'>
             <img src={icon} alt="Learnmate" className="h-14"/>
+            </Link>
           </div>
           <div className="hidden md:block">
             <div className="flex space-x-4 text-violet-900 font-medium">
@@ -36,12 +38,12 @@ const NavBar = () => {
               >
                 About
               </Link> */}
-              <Link
+              {/* <Link
                 to="/aibot"
                 className="hover:text-gray-900 px-3 py-2 rounded-md text-sm"
               >
                 Tutor
-              </Link>
+              </Link> */}
               {/* <Link
                 to="/team"
                 className="hover:text-gray-900 px-3 py-2 rounded-md text-sm"

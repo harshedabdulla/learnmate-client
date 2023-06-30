@@ -20,6 +20,11 @@ import Sortedpyq from './Sortedpyq'
 import Generalpyq from './Generalpyq'
 import Repetitivepyq from './Repetitivepyq'
 import StudyPlanner from './Studyplanner'
+import Uploadn1 from './Uploadn1'
+import Uploadp1 from './Uploadp1'
+import Uploads1 from './Uploads1'
+import Topiclist from './Topiclist'
+import Quiz from './Quiz'
 
 
 const App = () => {
@@ -48,8 +53,11 @@ const App = () => {
             <Route path="/generalpyq" component={Generalpyq} />
             <Route path="/repetitivepyq" component={Repetitivepyq} />
             <Route path="/studyplanner" component={StudyPlanner} />
-
-
+            <Route path="/uploadn1" component={Uploadn1} />
+            <Route path="/uploadp1" component={Uploadp1} />
+            <Route path="/uploads1" component={Uploads1} />
+            <Route path="/topiclist" component={Topiclist} />
+            <Route path="/quiz" component={Quiz} />
             
           </Switch>
         </BrowserRouter>

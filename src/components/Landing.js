@@ -6,9 +6,10 @@ import Hero from './Hero'
 const Landing = () => {
   return (
     <div>
+      <div className='w-screen'>
         <NavBar />
-        <Hero/>
-
+        <Hero />
+        </div>
     </div>
   )
 }

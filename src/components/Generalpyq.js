@@ -25,12 +25,11 @@ const Generalpyq = () => {
 
   return (
     <div>
+    <div className="w-screen">
       <Navbar />
-
-      <div className="flex justify-center">
-        <div className="w-1/2 h-1/2 bg-gray-200 rounded-lg mt-4">
-          <h1 className="text-center text-3xl">General PYQ</h1>
-          {pdfUrl && (
+      <div className="flex flex-col items-center h-screen w-screen text-center bg-gradient-to-tr from-violet-700 via-green-600 to-green-400 mt-3">
+        <h1 className="text-3xl text-white font-bold mb-4 mt-4">General PYQ</h1>
+         {pdfUrl && (
             <iframe src={pdfUrl} title="General PYQ" className="w-full h-full"></iframe>
           )}
         </div>

@@ -7,6 +7,8 @@ import studyplan from "../assets/121104-woman-discovering-business-statistics.js
 import repetition from "../assets/100679-wallp-repetitions-animation.json";
 import generalp from "../assets/132573-marking-exam-questions.json";
 import sorted from "../assets/96665-toggle-sort-menu-transition.json";
+import learn from "../assets/62404-academic-hut-banner.json";
+import quiz from "../assets/133329-yellow-quiz.json";
 
 
 
@@ -105,6 +107,32 @@ const Dashboard = () => {
           >
             <Lottie animationData={studyplan} className="h-20" />
             <h2 className="mb-4">Study plan</h2>
+            
+          </motion.div>
+          </Link>
+          <Link to="/topiclist">
+          <motion.div
+            className="bg-slate-100 rounded-lg shadow-lg py-6"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 0.2 }}
+          >
+            <Lottie animationData={learn} className="h-20" />
+            <h2 className="mb-4">Topic Learn</h2>
+            
+          </motion.div>
+          </Link>
+          <Link to="/quiz">
+          <motion.div
+            className="bg-slate-100 rounded-lg shadow-lg py-6"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 0.2 }}
+          >
+            <Lottie animationData={quiz} className="h-20" />
+            <h2 className="mb-4">Quiz</h2>
             
           </motion.div>
           </Link>

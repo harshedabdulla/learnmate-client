@@ -117,10 +117,10 @@ function Uploads({ moduleNumber }) {
     for (let i = 0; i < 1; i++) {
       inputs.push(
         <div key={`upload-input-${i}`}> 
-          <label>SYLLABUS PDF:</label>
+          <label>SYLLABUS Text:</label>
           <input
             type="file"
-            accept="application/pdf"
+            accept="application/text"
             className="mb-4 rounded-md px-3"
             onChange={(event) => handleFileChange(i, event)}
           />
