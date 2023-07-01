@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { motion } from 'framer-motion';
 import NavBar from './NavBar';
+import Lottie from 'lottie-react';
+import QuizAnimation from '../assets/92464-321-go.json';
 
 const Quiz = () => {
   const [questions, setQuestions] = useState([]);
@@ -50,6 +52,7 @@ const Quiz = () => {
 
     return (
       <div className="bg-white rounded-lg shadow-md p-8 flex flex-col">
+
         <h2 className="text-xl font-semibold mb-4">{currentQuestion.question}</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {currentQuestion.options.map((option, index) => (
@@ -91,9 +94,12 @@ const Quiz = () => {
   return (
     <div className="w-screen">
       <NavBar />
-      <div className="flex flex-col items-center h-screen w-screen text-center bg-gradient-to-tr from-violet-700 via-green-600 to-green-400 mt-3">
-        <h1 className="text-3xl text-white font-bold mb-4 mt-4">Quiz</h1>
+      <div className="flex flex-col items-center justify-center h-screen w-screen text-center bg-gradient-to-tr from-violet-700 via-green-600 to-green-400 mt-3">
+        <Lottie animationData={QuizAnimation} className="w-24 h-32" />
+        <h1 className="text-3xl text-white font-bold  mb-12">Quiz</h1>
+          <div className='flex items-center justify-center'>
         {!quizCompleted ? renderQuestion() : renderQuizCompleted()}
+        </div>
       </div>
     </div>
   );

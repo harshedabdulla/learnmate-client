@@ -26,6 +26,7 @@ import Uploads1 from './Uploads1'
 import Topiclist from './Topiclist'
 import Quiz from './Quiz'
 import Learnnote from './Learnnote'
+import Days from './Days'
 
 
 const App = () => {
@@ -60,6 +61,7 @@ const App = () => {
             <Route path="/topiclist" component={Topiclist} />
             <Route path="/quiz" component={Quiz} />
             <Route path="/learnnote" component={Learnnote} />
+            <Route path="/days" component={Days} />
             
           </Switch>
         </BrowserRouter>

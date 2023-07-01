@@ -3,17 +3,24 @@ import { motion } from "framer-motion";
 import Navbar from "./NavBar";
 import axios from "axios";
 import { useAuth } from "../contexts/AuthContext";
+import { useHistory } from "react-router-dom";
+
+
 
 const Topiclist = () => {
   const [topics, setTopics] = useState([]);
   const { currentUser } = useAuth();
+  const history = useHistory();
 
   useEffect(() => {
     const fetchTopics = async () => {
       try {
-        const response = await axios.post(
-            `http://172.25.0.105:8000/cardData?email=${currentUser.email}`
-        );
+        // const response = await axios.post(
+        //     `http://172.25.0.105:8000/cardData?email=${currentUser.email}`
+        // );
+        const response = await axios.get(
+          "https://api.npoint.io/92bf600ec20a42b5fcc1"
+      );
         setTopics(response.data);
       } catch (error) {
         console.error("Error fetching topics:", error);
@@ -22,6 +29,9 @@ const Topiclist = () => {
 
     fetchTopics();
   }, []);
+  const handleTopicClick = (topicName) => {
+    history.push(`/learnnote?topic=${encodeURIComponent(topicName)}`);
+  };
 
   return (
     <div className="w-screen">
@@ -35,6 +45,7 @@ const Topiclist = () => {
               className="bg-white rounded-lg shadow-md p-8 flex flex-col"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => handleTopicClick(topic.Topic_name)}
             >
               <motion.img
                 src={topic.image_link}

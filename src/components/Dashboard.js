@@ -7,7 +7,7 @@ import studyplan from "../assets/121104-woman-discovering-business-statistics.js
 import repetition from "../assets/100679-wallp-repetitions-animation.json";
 import generalp from "../assets/132573-marking-exam-questions.json";
 import sorted from "../assets/96665-toggle-sort-menu-transition.json";
-import learn from "../assets/62404-academic-hut-banner.json";
+import learn from "../assets/54639-boy-studying-science.json";
 import quiz from "../assets/133329-yellow-quiz.json";
 
 
@@ -58,46 +58,8 @@ const Dashboard = () => {
       <Navbar />
       <div className="flex flex-col items-center h-screen w-screen text-center bg-gradient-to-tr from-violet-700 via-green-600 to-green-400 mt-3">
          <div className="grid grid-cols-2 gap-6 py-12 h-4">
-        <Link to="/sortedpyq">
-        <motion.div
-            className="bg-slate-100 rounded-lg shadow-lg py-6 w-72"
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-            transition={{ delay: 0.2 }}
-          >
-            <Lottie animationData={sorted} className="h-20" />
-            <h2 className="mb-4">Sorted PYQ</h2>
-           
-          </motion.div>
-          </Link>
-          <Link to="/generalpyq">
-          <motion.div
-            className="bg-slate-100 rounded-lg shadow-lg py-6"
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-            transition={{ delay: 0.2 }}
-          >
-            <Lottie animationData={generalp} className="h-20" />
-            <h2 className="mb-4">General Question Paper</h2>
-           
-          </motion.div>
-          </Link>
-          <Link to="/repetitivepyq">
-          <motion.div
-            className="bg-slate-100 rounded-lg shadow-lg py-6"
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-            transition={{ delay: 0.2 }}
-          >
-            <Lottie animationData={repetition} className="h-20" />
-            <h2 className="mb-4">Repetitive questions</h2>
-            
-          </motion.div>
-          </Link>
-          <Link to="/studyplanner">
+       
+          <Link to="/days">
           <motion.div
             className="bg-slate-100 rounded-lg shadow-lg py-6"
             variants={containerVariants}
@@ -133,6 +95,46 @@ const Dashboard = () => {
           >
             <Lottie animationData={quiz} className="h-20" />
             <h2 className="mb-4">Quiz</h2>
+            
+          </motion.div>
+          </Link>
+
+          <Link to="/sortedpyq">
+        <motion.div
+            className="bg-slate-100 rounded-lg shadow-lg py-6 w-72"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 0.2 }}
+          >
+            <Lottie animationData={sorted} className="h-20" />
+            <h2 className="mb-4">Sorted PYQ</h2>
+           
+          </motion.div>
+          </Link>
+          <Link to="/generalpyq">
+          <motion.div
+            className="bg-slate-100 rounded-lg shadow-lg py-6"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 0.2 }}
+          >
+            <Lottie animationData={generalp} className="h-20" />
+            <h2 className="mb-4">General Question Paper</h2>
+           
+          </motion.div>
+          </Link>
+          <Link to="/repetitivepyq">
+          <motion.div
+            className="bg-slate-100 rounded-lg shadow-lg py-6"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            transition={{ delay: 0.2 }}
+          >
+            <Lottie animationData={repetition} className="h-20" />
+            <h2 className="mb-4">Repetitive questions</h2>
             
           </motion.div>
           </Link>
