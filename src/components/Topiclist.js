@@ -2,15 +2,17 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Navbar from "./NavBar";
 import axios from "axios";
+import { useAuth } from "../contexts/AuthContext";
 
 const Topiclist = () => {
   const [topics, setTopics] = useState([]);
+  const { currentUser } = useAuth();
 
   useEffect(() => {
     const fetchTopics = async () => {
       try {
-        const response = await axios.get(
-          "https://api.npoint.io/738eb0f30f5ebb0f7c02"
+        const response = await axios.post(
+            `http://172.25.0.105:8000/cardData?email=${currentUser.email}`
         );
         setTopics(response.data);
       } catch (error) {
@@ -24,7 +26,7 @@ const Topiclist = () => {
   return (
     <div className="w-screen">
       <Navbar />
-      <div className="flex flex-col items-center h-screen w-screen text-center bg-gradient-to-tr from-violet-700 via-green-600 to-green-400 mt-3">
+      <div className="flex flex-col items-center w-screen text-center bg-gradient-to-tr from-violet-700 via-green-600 to-green-400 mt-3">
         <h1 className="text-3xl text-white font-bold mb-4 mt-4">Topic Wise Revision</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-24">
           {topics.map((topic, index) => (

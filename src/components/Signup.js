@@ -30,8 +30,8 @@ const Signup = () => {
 
   return (
     <>
-      <div className="flex items-center justify-center h-screen w-screen">
-        <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+      <div className="flex items-center justify-center h-screen w-screen bg-gradient-to-tr from-violet-700 via-green-600 to-green-400">
+      <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
           <h2 className="text-center text-2xl font-bold mb-4">Sign Up</h2>
           {error && <div className="bg-red-500 text-white text-center py-2 mb-4">{error}</div>}
           <form onSubmit={handleSubmit}>

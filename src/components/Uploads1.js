@@ -34,6 +34,25 @@ function Uploads1({ moduleNumber }) {
       }
     }
   };
+  const handleFinish = async () => {
+
+    const formData = new FormData();
+      formData.append('user', currentUser.email);
+  
+      try {
+        const response = await axios.post(
+          'https://3f2ssd7loqowjtj7hnzhni7trq0blutk.lambda-url.us-east-1.on.aws/filestotext2',
+          formData
+        );
+  
+        console.log(response.data); // Handle the response data
+      } catch (error) {
+        console.error('Error calling API:', error);
+      }
+    }
+  
+  
+
 
   return (
     <div className="flex flex-col items-center justify-center w-screen text-center h-screen bg-gradient-to-tr from-violet-700 via-green-600 to-green-400">
@@ -64,13 +83,20 @@ function Uploads1({ moduleNumber }) {
           >
             Upload
           </motion.button>
-          <Link to="/wait" className="bg-green-500 text-white py-2 ml-4 px-6 mt-4 rounded-lg">
+          <Link to="/wait">
+          <button
+            className="bg-green-500 text-white py-2 ml-4 px-6 mt-4 rounded-lg"
+            onClick={handleFinish}
+          >
             Finish
+          </button>
           </Link>
         </motion.div>
       )}
     </div>
   );
-}
+};
+
+
 
 export default Uploads1;
