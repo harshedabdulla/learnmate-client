@@ -9,7 +9,7 @@ import { useHistory } from "react-router-dom";
 
 const Topiclist = () => {
   const [topics, setTopics] = useState([]);
-  const { currentUser } = useAuth();
+ // const { currentUser } = useAuth();
   const history = useHistory();
 
   useEffect(() => {

@@ -19,6 +19,7 @@
     "react-router-dom": "^5.3.4",
     "react-scripts": "5.0.1",
     "react-simple-chatbot": "^0.6.1",
+    "styled-components": "^6.0.1",
     "tiptap": "^1.32.2",
     "web-vitals": "^2.1.4"
   },

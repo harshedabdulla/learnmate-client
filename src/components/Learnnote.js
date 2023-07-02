@@ -72,7 +72,7 @@ const Learnnote = () => {
                     <iframe
                       width="600"
                       height="260"
-                      src="https://www.youtube.com/embed/3oNzkS1WYas" // Update the URL here
+                      src="https://www.youtube.com/embed/ss9FpyRgIjw" // Update the URL here
                       title="YouTube video player"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
@@ -100,27 +100,37 @@ const Learnnote = () => {
                             },
                             {
                               id: '3',
-                              message: 'Sure, I can help you learn about Kmap. Kmap stands for Karnaugh Map, which is a graphical method used to simplify Boolean algebra expressions. It helps in reducing the number of terms and literals in a logical function.',
+                              message: 'Sure, I can help you with your doubt. What is your question about the BCD adder concept?',
                               trigger: '4',
                             },
                             {
                               id: '4',
-                              message: 'Kmaps are particularly useful in digital circuit design and simplification of logic expressions. They provide a visual representation that makes it easier to analyze and simplify complex logical functions.',
+                              user: true,
                               trigger: '5',
                             },
                             {
                               id: '5',
-                              message: 'Is there anything specific you would like to know about Kmap?',
+                              message: 'I see. The BCD adder, also known as the Binary Coded Decimal adder, is a digital circuit that performs addition on Binary Coded Decimal numbers. BCD is a way to represent decimal numbers in binary form, where each decimal digit is represented by a four-bit binary code.',
                               trigger: '6',
                             },
                             {
                               id: '6',
-                              user: true,
+                              message: 'The BCD adder works by adding each corresponding digit of the BCD numbers, similar to how we add decimal numbers. However, if the sum of a digit exceeds 9, which is the largest value in BCD representation, a correction process called "BCD correction" is performed to adjust the result.',
                               trigger: '7',
                             },
                             {
                               id: '7',
-                              message: 'I apologize, but I am a simple chatbot and may not have all the answers. However, I can provide you with resources and references to learn more about Kmaps. You can try searching online tutorials, videos, or textbooks on the topic. They can provide in-depth explanations and examples to enhance your understanding.',
+                              message: 'Do you have any specific doubts or questions about the BCD adder concept?',
+                              trigger: '8',
+                            },
+                            {
+                              id: '8',
+                              user: true,
+                              trigger: '9',
+                            },
+                            {
+                              id: '9',
+                              message: 'I apologize, but I am a simple chatbot and may not have all the answers. However, I can provide you with resources and references to learn more about BCD adders. You can try searching online tutorials, videos, or textbooks on the topic. They can provide in-depth explanations and examples to enhance your understanding.',
                               end: true,
                             },
                           ]}
